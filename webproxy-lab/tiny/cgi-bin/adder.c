@@ -10,7 +10,7 @@ int main(void)
   char arg1[MAXLINE], arg2[MAXLINE], content[MAXLINE];
   int n1 = 0, n2 = 0;
 
-  /* Extract the two arguments */
+  // 서버에서 setenv를 통해 받아왔던 cgiargs가 QUERY_STRING에 있으니까, 그거 가져다 씀.
   if ((buf = getenv("QUERY_STRING")) != NULL)
   {
     p = strchr(buf, '&');
